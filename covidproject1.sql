@@ -1,4 +1,4 @@
---Cntrl shft rigt- hepsini seçer
+--Cntrl shft rigt- hepsini seÃ§er
 --Cntrl z - geri getirir
 --totalceses vs totaldeaths
 select location, date, total_cases, total_deaths, 
