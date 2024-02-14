@@ -14,3 +14,20 @@ ratings_change float,
 placement_score float,
 placement_score_change float
 )
+
+
+
+insert into template_of_analysis
+
+select cat.ean, cat.category, cat.subcategory,
+q1pro.total_score, q1pro.total_score_change, q1pro.[product_content ], q1pro.product_content_change, 
+q1pro.assortment, q1pro.assortment_change, q1pro.ratings, q1pro.ratings_change, 
+placement_score, placement_score_change
+
+from category cat
+inner join Q1_products q1pro
+	on cat.ean= q1pro.ean
+inner join Q1_placement_product q1pla
+on cat.ean= q1pla.ean
+
+
