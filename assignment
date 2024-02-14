@@ -1,0 +1,16 @@
+Create Table template_of_analysis
+(
+ean float,
+category nvarchar(255),
+subcategory nvarchar(255),
+total_score float,
+total_score_change float,
+product_content float,
+prroduct_content_change float,
+assortment float,
+assortment_change float,
+ratings float,
+ratings_change float,
+placement_score float,
+placement_score_change float
+)
