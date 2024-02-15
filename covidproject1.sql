@@ -105,3 +105,21 @@ Join PortfolioProject..CovidVaccinations vac
 	On dea.location = vac.location
 	and dea.date = vac.date
 where dea.continent is not null 
+
+
+
+
+--CTE(common table expression)
+
+with cte_employee as
+(select first_name, last_name, gender, salary,
+count(gender) over (partition by gender) as total_gender,
+avg(salary) over (partition by gender) as avg_salary,
+from table1 
+join table2
+	on
+where salary > '45000'
+)
+select * from cte_employee
+
+
